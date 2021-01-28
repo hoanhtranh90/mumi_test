@@ -2,18 +2,8 @@
 
 Project các ứng dụng mobile của hệ thống EOffice (App nghiệp vụ, App MobiBeat)
 
-sửa
+update AndroidX
 
-static BOOL RCTParseUnused(const char **input)
-{
-return RCTReadString(input, "__attribute__((unused))") ||
-RCTReadString(input, "__attribute__((__unused__))") ||
-
-@AshishKapoor AshishKapoor on 10 Sep
-Works!
-
-@quangnd1910	Reply…
-RCTReadString(input, "__unused");
-}
-
-trong node_modules/react-native/React/Base/RCTModuleMethod.mm
+npm install --save-dev jetifier
+npx jetify
+npx react-native run-android (your app should correctly compile and work)
