@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "282736633670",
+    "firebase_url": "https://eoffice-289f2.firebaseio.com",
+    "project_id": "eoffice-289f2",
+    "storage_bucket": "eoffice-289f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:282736633670:android:bd6497c534125f2e",
+        "android_client_info": {
+          "package_name": "vn.mobifone.eoffice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "282736633670-1917jdd8dqqmo5vf3lmo0nigksl5g47a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKQaGIXfrgZ_l5xmvEFvxOWE1LvM2LETY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "282736633670-1917jdd8dqqmo5vf3lmo0nigksl5g47a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "282736633670-iiodm9q4i2r3ph42o8hp7onkhv0v2ab1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "vn.mobifone.eoffice"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

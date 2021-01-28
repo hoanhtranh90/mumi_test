@@ -1,0 +1,43 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'eoffice' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  #use_frameworks!
+
+  # Pods for eoffice
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
+  pod 'React', :path => '../node_modules/react-native'
+  pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+  pod 'Folly', :podspec => "../node_modules/react-native/third-party-podspecs/Folly.podspec"
+
+  pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
+
+  post_install do |installer|
+    rnfirebase = installer.pods_project.targets.find { |target| target.name == 'RNFirebase' }
+      rnfirebase.build_configurations.each do |config|
+        config.build_settings['HEADER_SEARCH_PATHS'] = '$(inherited) ${PODS_ROOT}/Headers/Public/**'
+      end
+    installer.pods_project.targets.each do |target|
+      if target.name == "React"
+        target.remove_from_project
+      end
+      if target.name == "yoga"
+        target.remove_from_project
+      end
+    end
+  end
+
+  target 'eoffice-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'eofficeTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

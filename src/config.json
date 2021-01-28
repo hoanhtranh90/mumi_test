@@ -1,0 +1,48 @@
+// {
+//   "baseUrl": "https://office.adfilex.vn/business-service/",
+//   "sso": {
+//     "url": "https://office.adfilex.vn/sso",
+//     "clientId": "VPDT_STAGING",
+//     "clientPass": "vpdt@16)$"
+//   },
+//   "version": {
+//     "ios": 2020120100,
+//     "android": 2020120100
+//   }
+// }
+// {
+//   "baseUrl": "http://192.168.1.239:9084/osp-business-service/",
+//   "sso": {
+//     "url": "http://192.168.1.239:9080/osp-sso",
+//     "clientId": "VPDT_LOCAL",
+//     "clientPass": "vpdt@16)$"
+//   },
+//   "version": {
+//     "ios": 2020120100,
+//     "android": 2020120100
+//   }
+// }
+// {
+//   "baseUrl": "https://eoffice.mobifone.vn/BusinessService/",
+//   "sso": {
+//     "url": "https://eoffice.mobifone.vn/sso",
+//     "clientId": "WEB-EOFFICE-PRODUCTION",
+//     "clientPass": "gZnlUWbOK0bTGAnsXNrpXanHzyUK6i1j"
+//   },
+//   "version": {
+//     "ios": 2020120100,
+//     "android": 2020120100
+//   }
+// }
+{
+  "baseUrl": "https://eoffice.ospgroup.vn/osp-business-service/",
+  "sso": {
+    "url": "https://eoffice.ospgroup.vn/osp-sso",
+    "clientId": "VPDT_PRODUCTION",
+    "clientPass": "vpdt@16)$"
+  },
+  "version": {
+    "ios": 2020120100,
+    "android": 2020120100
+  }
+}

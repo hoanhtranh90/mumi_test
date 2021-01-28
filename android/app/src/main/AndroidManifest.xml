@@ -1,0 +1,126 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  package="vn.mobifone.eoffice">
+
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+  <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+  <uses-permission android:name="android.permission.VIBRATE"/>
+
+  <application
+    android:name="vn.mobifone.eoffice.MainApplication"
+    android:requestLegacyExternalStorage="true"
+    android:allowBackup="false"
+    android:icon="@mipmap/ic_launcher"
+    android:launchMode="singleTask"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:label="@string/app_name"
+    android:usesCleartextTraffic="true"
+    android:theme="@style/AppTheme"
+    tools:targetApi="m">
+    <activity
+      android:name=".MainActivity"
+      android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+      android:label="@string/app_name"
+      android:launchMode="singleTask"
+      android:screenOrientation="portrait"
+      android:windowSoftInputMode="adjustResize">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+      <intent-filter android:label="@string/app_name" android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="mobieoffice"
+              android:host="viewDetailDoc"/>
+      </intent-filter>
+
+      <intent-filter android:label="@string/app_name" android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="mobieoffice"
+              android:host="viewDetailDieuXe"/>
+      </intent-filter>
+
+      <intent-filter android:label="@string/app_name" android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="mobieoffice"
+              android:host="viewDetailDieuXeDX"/>
+      </intent-filter>
+
+      <intent-filter android:label="@string/app_name" android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="mobieoffice"
+              android:host="viewDetailPhongHop"/>
+      </intent-filter>
+
+      <intent-filter android:label="@string/app_name" android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="mobieoffice"
+              android:host="viewDetailPhongHopDX"/>
+      </intent-filter>
+
+      <intent-filter android:label="@string/app_name" android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="mobieoffice"
+              android:host="viewDetailLichTuan"/>
+      </intent-filter>
+
+      <intent-filter android:label="@string/app_name" android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="mobieoffice"
+              android:host="viewFullLichTuan"/>
+      </intent-filter>
+
+    </activity>
+    <activity android:name="com.facebook.react.devsupport.DevSettingsActivity"/>
+    <provider
+      android:name="com.vinzscam.reactnativefileviewer.FileProvider"
+      android:authorities="${applicationId}.provider"
+      android:exported="false"
+      android:grantUriPermissions="true">
+      <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/file_viewer_provider_paths"
+      />
+    </provider>
+    <service android:name="io.invertase.firebase.messaging.RNFirebaseMessagingService">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+      </intent-filter>
+    </service>
+    <service android:name="io.invertase.firebase.messaging.RNFirebaseBackgroundMessagingService"/>
+    <receiver android:name="io.invertase.firebase.notifications.RNFirebaseNotificationReceiver"/>
+    <receiver android:enabled="true" android:exported="true"
+              android:name="io.invertase.firebase.notifications.RNFirebaseNotificationsRebootReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+        <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </receiver>
+    <meta-data
+      android:name="com.google.firebase.messaging.default_notification_channel_id"
+      android:value="channelId"/>
+  </application>
+
+</manifest>

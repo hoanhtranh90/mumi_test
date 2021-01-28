@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1069472321711-uabo7jiltp2cm913gltbotm18j7tqndl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1069472321711-uabo7jiltp2cm913gltbotm18j7tqndl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDLc6xQyhCVvWbSvq6iwdsfh_aWzmaiOC8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1069472321711</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>vn.mobifone.eoffice</string>
+	<key>PROJECT_ID</key>
+	<string>eoffice-ab613</string>
+	<key>STORAGE_BUCKET</key>
+	<string>eoffice-ab613.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1069472321711:ios:f46afad705abc74d64c45a</string>
+	<key>DATABASE_URL</key>
+	<string>https://eoffice-ab613.firebaseio.com</string>
+</dict>
+</plist>
